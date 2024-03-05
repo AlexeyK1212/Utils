@@ -20,7 +20,7 @@ class UtilsTest {
 
 
         assertEquals(num.doubleValue (),0.5);
-        assertEquals(outContent.toString(),"invoke double value\r\n");
+        assertEquals(outContent.toString().replaceAll("[\n\r]",""),"invoke double value");
         outContent.reset();
 
         assertEquals(num.doubleValue (),0.5);
@@ -33,7 +33,7 @@ class UtilsTest {
 
         num.setNum(5);
         assertEquals(num.doubleValue (),2.5);
-        assertEquals(outContent.toString(),"invoke double value\r\n");
+        assertEquals(outContent.toString().replaceAll("[\n\r]",""),"invoke double value");
         outContent.reset();
 
         assertEquals(num.doubleValue (),2.5);
